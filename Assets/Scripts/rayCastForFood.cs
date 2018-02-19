@@ -27,7 +27,14 @@ public class rayCastForFood : MonoBehaviour
 					text.enabled = true;
 					text.text = "you killed me thanks";
 					Destroy(hit.transform.gameObject);
-				}	
+				}
+				
+				if (hit.transform.gameObject.tag == "Safe") //if you eat not a nut, you win
+                {
+                   text.enabled = true;
+                   text.text = "you win i guess?";
+                   Destroy(hit.transform.gameObject);
+                 }	
 			}
 		}
 	}
