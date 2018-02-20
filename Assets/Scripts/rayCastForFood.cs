@@ -6,6 +6,9 @@ using UnityEngine.UI;
 public class rayCastForFood : MonoBehaviour
 {
 	public Text text;
+
+	private float timeLeft = 300.0f;
+	public Text timerText;
 	
 	// Use this for initialization
 	void Start ()
@@ -13,9 +16,17 @@ public class rayCastForFood : MonoBehaviour
 		text.enabled = false;
 	}
 	
-	//raycast for food!
 	// Update is called once per frame
 	void Update () {
+		//timer go
+		timeLeft -= Time.deltaTime;
+		timerText.text = "Time Left:" + Mathf.Round(timeLeft);
+		if (timeLeft < 0)
+		{
+			timerText.text = "Game over";
+		}
+		
+		//raycast for food
 		if (Input.GetMouseButtonDown(0))
 		{
 			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
