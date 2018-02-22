@@ -18,15 +18,6 @@ public class playerController : MonoBehaviour
 
 	public Transform playerPos;
 
-
-//	public Text text;
-
-	public float distance = 10.0f;
-	private float currentX = 0.0f;
-	private float currentY = 0.0f;
-
-	private float sensitivityY = 4.0f;
-
 	// Use this for initialization
 	void Start()
 	{
@@ -50,12 +41,6 @@ public class playerController : MonoBehaviour
 
 		moveDirection.y -= gravity * Time.deltaTime;
 		cc.Move(moveDirection * Time.deltaTime);
-
-
-		//make camera follow ur mouse
-		float newRotationY = transform.localEulerAngles.y + Input.GetAxis("Mouse X") * sensitivityY;
-
-		gameObject.transform.localEulerAngles = new Vector3(0, newRotationY, 0);
 	}
 }
 

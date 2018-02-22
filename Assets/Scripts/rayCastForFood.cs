@@ -7,13 +7,17 @@ public class rayCastForFood : MonoBehaviour
 {
 	public Text text;
 
-	private float timeLeft = 300.0f;
+	private float timeLeft = 120.0f;
 	public Text timerText;
+	public Text scoreText;
+	private int score;
 	
 	// Use this for initialization
 	void Start ()
 	{
 		text.enabled = false;
+
+		score = 0;
 	}
 	
 	// Update is called once per frame
@@ -42,11 +46,12 @@ public class rayCastForFood : MonoBehaviour
 				
 				if (hit.transform.gameObject.tag == "Safe") //if you eat not a nut, you win
                 {
-                   text.enabled = true;
-                   text.text = "you win i guess?";
+	               score++;
                    Destroy(hit.transform.gameObject);
                  }	
 			}
 		}
+		
+		scoreText.text = "Snacks Eaten: " + score;
 	}
 }
