@@ -37,18 +37,27 @@ public class rayCastForFood : MonoBehaviour
 			RaycastHit hit;
 			if (Physics.Raycast(ray, out hit))
 			{
-				if (hit.transform.gameObject.tag == "Death") //if you eat a nut, yiou die
+				if (hit.transform.gameObject.tag == "Death") //decrease time left after eating a nut
 				{
+					timeLeft = timeLeft - 20.0f;
 					text.enabled = true;
-					text.text = "you killed me thanks";
+					text.text = "Uh oh! Looks like that had some nuts in it.";
 					Destroy(hit.transform.gameObject);
 				}
 				
-				if (hit.transform.gameObject.tag == "Safe") //if you eat not a nut, you win
+				if (hit.transform.gameObject.tag == "Safe") //if you eat not a nut, you increase score
                 {
 	               score++;
                    Destroy(hit.transform.gameObject);
                  }	
+				
+				if (hit.transform.gameObject.tag == "Dont") //why would you eat an inedible object
+				{
+					text.enabled = true;
+					text.text = "A forbidden snack...";
+					score++;
+					Destroy(hit.transform.gameObject);
+				}	
 			}
 		}
 		
