@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class rayCastForFood : MonoBehaviour
 {
@@ -25,9 +26,17 @@ public class rayCastForFood : MonoBehaviour
 		//timer go
 		timeLeft -= Time.deltaTime;
 		timerText.text = "Time Left:" + Mathf.Round(timeLeft);
-		if (timeLeft < 0)
+		
+		//game over if you haven't eaten anything good
+		if ((timeLeft < 0) & (score == 0))
 		{
-			timerText.text = "Game over";
+			SceneManager.LoadScene("GameOver");
+		}
+		
+		//game end if you have eaten some good boys
+		if ((timeLeft < 0) & (score > 0))
+		{
+			SceneManager.LoadScene("GameEnd");
 		}
 		
 		//raycast for food
