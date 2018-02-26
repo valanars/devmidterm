@@ -332,7 +332,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 41.992188, y: 139.16504}
+  m_AnchoredPosition: {x: 23.946167, y: 139.16504}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &403444085
@@ -369,7 +369,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Use the mouse and left click a snack to eat it!
 
-    Avoid nuts and munch as many things as you can before time runs out.
+    Avoid nuts, ''cause they''ll kill you.
 
 
     Press SPACE to play
