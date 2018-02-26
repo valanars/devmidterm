@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class rayCastForFood : MonoBehaviour
+public class charaScript : MonoBehaviour
 {
 	public Text text;
 
