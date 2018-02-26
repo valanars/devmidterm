@@ -8,10 +8,11 @@ public class rayCastForFood : MonoBehaviour
 {
 	public Text text;
 
-	private float timeLeft = 120.0f;
+	private float timeLeft = 40.0f;
 	public Text timerText;
 	public Text scoreText;
 	private int score;
+	private int nuts;
 	
 	// Use this for initialization
 	void Start ()
@@ -19,6 +20,7 @@ public class rayCastForFood : MonoBehaviour
 		text.enabled = false;
 
 		score = 0;
+		nuts = 0;
 	}
 	
 	// Update is called once per frame
@@ -28,13 +30,13 @@ public class rayCastForFood : MonoBehaviour
 		timerText.text = "Time Left:" + Mathf.Round(timeLeft);
 		
 		//game over if you haven't eaten anything good
-		if ((timeLeft < 0) & (score == 0))
+		if ((timeLeft < 0) & (nuts > 0))
 		{
 			SceneManager.LoadScene("GameOver");
 		}
 		
 		//game end if you have eaten some good boys
-		if ((timeLeft < 0) & (score > 0))
+		if ((timeLeft < 0) && (nuts < 1) && (score > 0))
 		{
 			SceneManager.LoadScene("GameEnd");
 		}
@@ -50,14 +52,16 @@ public class rayCastForFood : MonoBehaviour
 				{
 					timeLeft = timeLeft - 20.0f;
 					text.enabled = true;
+					nuts++;
 					text.text = "Uh oh! Looks like that had some nuts in it.";
 					Destroy(hit.transform.gameObject);
 				}
 				
 				if (hit.transform.gameObject.tag == "Safe") //if you eat not a nut, you increase score
-                {
-	               score++;
-                   Destroy(hit.transform.gameObject);
+				{
+					timeLeft = timeLeft + 10.0f;
+	                score++;
+                    Destroy(hit.transform.gameObject);
                  }	
 				
 				if (hit.transform.gameObject.tag == "Dont") //why would you eat an inedible object
@@ -65,6 +69,7 @@ public class rayCastForFood : MonoBehaviour
 					text.enabled = true;
 					text.text = "A forbidden snack...";
 					score++;
+					timeLeft = timeLeft + 10.0f;
 					Destroy(hit.transform.gameObject);
 				}	
 			}
