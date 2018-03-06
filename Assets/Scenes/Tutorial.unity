@@ -367,9 +367,13 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Use the mouse and left click a snack to eat it!
+  m_Text: 'Eat snacks and avoid peanuts!
 
-    Avoid nuts, ''cause they''ll kill you.
+    LEFT CLICK to examine a snack.
+
+    Press ''E'' to eat it.
+
+    Hit BACKSPACE to return item to shelf.
 
 
     Press SPACE to play
