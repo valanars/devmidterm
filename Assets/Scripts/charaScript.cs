@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class charaScript : MonoBehaviour
 {
-	private float timeLeft = 120.0f;
+	private float timeLeft = 100.0f;
 	public Text timerText;
 	public Text scoreText;
 	private int score;

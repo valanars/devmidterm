@@ -37,13 +37,13 @@ RenderSettings:
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
-  m_Sun: {fileID: 0}
+  m_Sun: {fileID: 634816906}
   m_IndirectSpecularColor: {r: 0.43734977, g: 0.48513097, b: 0.5653953, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 0
+  m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -89,7 +89,8 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000002, guid: 5c817e64f6abd4287b9c4a7d7c8fcbde,
+    type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
@@ -311,7 +312,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 138760270}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.9987588, y: 0, z: -10.34}
+  m_LocalPosition: {x: 1.9987588, y: -7.26, z: -10.34}
   m_LocalScale: {x: 9.800467, y: 23.161503, z: 0.16156632}
   m_Children: []
   m_Father: {fileID: 368857512}
@@ -721,7 +722,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
@@ -1444,7 +1445,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1006470551}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.9987588, y: 0, z: 12.81}
+  m_LocalPosition: {x: 1.9987588, y: -7.26, z: 12.81}
   m_LocalScale: {x: 9.800467, y: 21.523983, z: 0.16156632}
   m_Children: []
   m_Father: {fileID: 368857512}
@@ -1887,8 +1888,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1285232379}
   m_LocalRotation: {x: -0, y: -0.70690763, z: -0, w: 0.70730597}
-  m_LocalPosition: {x: -2.8612413, y: 0, z: 0.78}
-  m_LocalScale: {x: 25.315413, y: 25.133635, z: 0.1615664}
+  m_LocalPosition: {x: -2.8612413, y: -2.36, z: 0.78}
+  m_LocalScale: {x: 25.315413, y: 16.628271, z: 0.1615664}
   m_Children: []
   m_Father: {fileID: 368857512}
   m_RootOrder: 2
