@@ -16,6 +16,8 @@ TagManager:
   - Reeses
   - Cheerios
   - Fish
+  - Milk
+  - Meat
   layers:
   - Default
   - TransparentFX

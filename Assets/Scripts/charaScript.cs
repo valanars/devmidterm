@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class charaScript : MonoBehaviour
 {
-	private float timeLeft = 40.0f;
+	private float timeLeft = 120.0f;
 	public Text timerText;
 	public Text scoreText;
 	private int score;
@@ -16,14 +16,14 @@ public class charaScript : MonoBehaviour
 	private bool zoom;
 
 	public Image peanutInfo;
-	public Image candyInfo;
+	public Image milkInfo;
 	public Image bbInfo;
 	public Image reesesInfo;
 	public Image cheerInfo;
 	public Image grassInfo;
 	public Image fishInfo;
 	public Image teethInfo;
-	public Image sbInfo;
+	public Image meatInfo;
 
 	private RaycastHit hit;
 
@@ -32,14 +32,14 @@ public class charaScript : MonoBehaviour
 	{
 		//set all the images to false
 		peanutInfo.enabled = false;
-		candyInfo.enabled = false;
+		milkInfo.enabled = false;
 		bbInfo.enabled = false;
 		reesesInfo.enabled = false;
 		cheerInfo.enabled = false;
 		grassInfo.enabled = false;
 		fishInfo.enabled = false;
 		teethInfo.enabled = false;
-		sbInfo.enabled = false;
+		meatInfo.enabled = false;
 
 		score = 0;
 		nuts = 0;
@@ -91,9 +91,9 @@ public class charaScript : MonoBehaviour
 				info = peanutInfo;
 				timeChange = -20f;
 				nutChange = 1;
-			} else if (food.tag == "Candy") //CANDY
+			} else if (food.tag == "Milk") //MILK
 			{
-				info = candyInfo;
+				info = milkInfo;
 				timeChange = -20f;
 				nutChange = 1;
 			} else if (food.tag == "BreadBad") //NAUGHTY LOAF
@@ -128,9 +128,9 @@ public class charaScript : MonoBehaviour
 				timeChange = 0;
 				nutChange = 0;
 				scoreChange = 1;
-			} else if (food.tag == "BreadSafe") //BREAD
+			} else if (food.tag == "Meat") //MEAT
 			{
-				info = sbInfo;
+				info = meatInfo;
 				timeChange = 0;
 				nutChange = 0;
 				scoreChange = 1;
