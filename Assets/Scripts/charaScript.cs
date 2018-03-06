@@ -53,6 +53,7 @@ public class charaScript : MonoBehaviour
 		//timer go
 		timeLeft -= Time.deltaTime;
 		timerText.text = "Time Left:" + Mathf.Round(timeLeft);
+		scoreText.text = "Score:" + score;
 
 		//game over if you haven't eaten anything good
 		if ((timeLeft < 0) & (nuts > 0))
@@ -152,8 +153,6 @@ public class charaScript : MonoBehaviour
 				Destroy(food);
 				zoom = false;
 			}
-			
-			scoreText.text = "Snacks Eaten: " + score;
 		}
 	}
 }
