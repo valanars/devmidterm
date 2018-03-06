@@ -7,6 +7,15 @@ TagManager:
   - Death
   - Safe
   - Dont
+  - Peanut
+  - BreadSafe
+  - BreadBad
+  - Candy
+  - Teeth
+  - Grass
+  - Reeses
+  - Cheerios
+  - Fish
   layers:
   - Default
   - TransparentFX
