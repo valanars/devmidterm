@@ -46,7 +46,7 @@ public class charaScript : MonoBehaviour
 
 		zoom = false;
 	}
-
+	
 	// Update is called once per frame
 	void Update()
 	{
@@ -80,6 +80,7 @@ public class charaScript : MonoBehaviour
 	//get food info
 		if (zoom)
 		{
+			ScreenShake cs = GetComponent<ScreenShake>();
 			Image info = peanutInfo; //just set it to w/e bc it wont let me do shit otherwise lol
 			GameObject food = hit.transform.gameObject;
 			float timeChange = 0;
@@ -152,6 +153,16 @@ public class charaScript : MonoBehaviour
 				Destroy(info);
 				Destroy(food);
 				zoom = false;
+
+				if ((food.tag == "Peanut") || (food.tag == "Milk") || (food.tag == "BreadBad") || (food.tag == "Reeses") ||
+				    (food.tag == "Cheerios") || (food.tag == "Grass"))
+				{
+					cs.Shake();
+				}
+				else
+				{
+					return;
+				}
 			}
 		}
 	}
